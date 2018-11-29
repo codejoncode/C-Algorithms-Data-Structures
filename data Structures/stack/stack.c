@@ -78,5 +78,6 @@ int main(void) {
         printf("%d\n", pop_from_stack(s));
     }
 
+    free(s);
     return 0; 
 }
