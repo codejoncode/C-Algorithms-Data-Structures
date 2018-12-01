@@ -93,7 +93,7 @@ int remove_from_back_list(list * l)
     }
     int value;
     if(l->size == 1){
-        int value = l->head->value; 
+        value = l->head->value; 
         free(l->head);
         l->head = NULL; 
         l->size--;
@@ -135,5 +135,6 @@ int main()
     //should return 215 112 56 78 43    because we add to the front  56   then   78 56  then 43 78 56 then we add to the back 
     // 43 78 56 112   215  
     //we will then pop from the back   215  112  56 78 43. 
+    free(l);  // free the list    free of the nodes is taken care of when we remove.
     return 0; 
 }
